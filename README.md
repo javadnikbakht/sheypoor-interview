@@ -23,7 +23,7 @@ The value of sentence you're looking for is: 10
 Also you can run some before-ready unit tests on my script to be sure about script simply what you see in the shell 
 snippet below:
 ```
-(venv) ➜  sheypoor-interview git:(master) ✗ python tests.py 
+➜ sheypoor-interview git:(master) ✗ python tests.py 
 
 Test for a non-integer(float) number as number of sentence in the sequence
 .
