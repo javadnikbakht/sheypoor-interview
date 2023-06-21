@@ -1,0 +1,8 @@
+[tool.black]
+line-length = 121
+target-version = ['py38']
+
+[tool.bandit]
+# we dont need to exclude `.venv` in bandit as it uses wildcast here
+exclude_dirs = ["venv", "_local_test", "dev_dir"]
+skips = ["B110"]
