@@ -81,7 +81,7 @@ repos:
       - id: test
         name: test
         description: Check running tests and failure of them
-        entry: sh -c 'coverage run tests.py && coverage report --fail-under 80'
+        entry: sh -c "coverage run tests.py && coverage report --fail-under 90"
         types:
           - python
         pass_filenames: false
