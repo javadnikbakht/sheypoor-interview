@@ -44,3 +44,17 @@ Ran 7 tests in 0.000s
 
 OK
 ```
+### Time and Space Complexity of my script
+
+The time complexity of the `find_nth_sentence` method is equal to **`O(n)`**, 
+because in this method, a loop of length of **`n`** is executed, and for each round of the loop, two addition 
+and division operations are performed, both of which have a complexity of **`O(1)`** 
+And actually something similar to the picture below happens:
+![](https://i.postimg.cc/T3n7RQ48/1-l-SNey-Lt-ALCPdm-HXr-Xeww-w.webp)
+
+(Why we said the time complexity of`sum_digits(value)` is O(1) While there is a `while` loop in that method? That's 
+becuase the max for sum of digits with mod of 10 is for example is 9 and 9 which means that the max of time complexity
+of that method is 2 (**`O(1)`**)).
+
+The memory complexity of `find_nth_sentence` function is also **`O(1)`**, because only a few variables are used to store
+the input and output values of the function, and no larger data structures (such as `lists`) are used to store the data.
