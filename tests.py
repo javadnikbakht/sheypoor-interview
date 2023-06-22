@@ -2,6 +2,7 @@ import unittest
 
 from main import MAX_NUMBER_FOR_SENTENCE_IN_SEQUENCE
 from main import SheypoorInterviewTaskSequence
+from optimized import SheypoorInterviewTaskSequence as OptimizedSheypoorInterviewTaskSequence
 
 
 class RequestedSentencesTestCase(unittest.TestCase):
@@ -48,6 +49,29 @@ class BadInputsTestCase(unittest.TestCase):
         desired_msg = SheypoorInterviewTaskSequence.msg_for_out_of_bound
         print("\nTest for a negative number as number of sentence in the sequence")
         self.assertEqual(SheypoorInterviewTaskSequence.find_nth_sentence(n), desired_msg)
+
+
+class RequestedSentencesInOptimizedVersionTestCase(unittest.TestCase):
+    def test_second_sentence_of_sequence(self):
+        n = 2
+        print(f"\nTest The {n}nd sentence of sequence in optimized version")
+        seq = OptimizedSheypoorInterviewTaskSequence()
+        desired_result = 1
+        self.assertEqual(seq.find_nth_sentence(n), desired_result)
+
+    def test_sixth_sentence_of_sequence(self):
+        n = 6
+        print(f"\nTest The {n}th sentence of sequence in optimized version")
+        seq = OptimizedSheypoorInterviewTaskSequence()
+        desired_result = 8
+        self.assertEqual(seq.find_nth_sentence(n), desired_result)
+
+    def test_tenth_sentence_of_sequence(self):
+        n = 10
+        print(f"\nTest The {n}th sentence of sequence in optimized version")
+        seq = OptimizedSheypoorInterviewTaskSequence()
+        desired_result = 10
+        self.assertEqual(seq.find_nth_sentence(n), desired_result)
 
 
 if __name__ == "__main__":

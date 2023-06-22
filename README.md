@@ -17,7 +17,7 @@ returns the **`nth`** member of the above sequence.
 You can run my script to get the nth sentence of above sequence simply what you see in the shell snippet below:
 ```
 ➜ sheypoor-interview git:(master) ✗ python main.py 
-Enter a number between 0 and 1000000: 10
+Enter a number between 0 and 1000000000: 10
 The value of sentence you're looking for is: 10
 ```
 
@@ -67,4 +67,20 @@ working directory of project:
 
 ```
 ➜ sheypoor-interview git:(master) ✗ docker-compose up
+```
+
+### Other
+I've just added a new script (`optimized.py`) which improved the performance of the `main.py` with [memoization technique](https://en.wikipedia.org/wiki/Memoization) and
+more other changes listed below:
+- Adding an `__init__` method to initialize a memoization dictionary.
+- Using the memoization dictionary to store previously computed values and avoid redundant calculations.
+- Changing the `find_nth_sentence` method to an instance method to allow for the memoization dictionary to be used.
+- Changing the input validation messages to instance variables instead of class variables since they are specific to instances of the class.
+- Removing the `try-except` block since input validation is now handled by the `ValueError` exceptions.
+- Using `self` instead of cls for instance variables and methods.
+Run this module like below shell snippet:
+```
+➜ sheypoor-interview git:(master) ✗ python optimized.py 
+Enter the number of sentence you're looking for (between 0 and 1000000000: 6
+The value of sentence you're looking for is: 8
 ```
