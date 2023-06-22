@@ -58,3 +58,11 @@ of that method is 2 (**`O(1)`**)).
 
 The memory complexity of `find_nth_sentence` function is also **`O(1)`**, because only a few variables are used to store
 the input and output values of the function, and no larger data structures (such as `lists`) are used to store the data.
+
+### Running with Docker
+To run script with a default number (I've set `n = 10` in `main.py` module), you just need to run below command in
+working directory of project:
+
+```
+➜ sheypoor-interview git:(master) ✗ docker-compose up
+```

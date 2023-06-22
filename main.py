@@ -47,7 +47,11 @@ class SheypoorInterviewTaskSequence:
 
 
 def main():
-    n = int(input("Enter a number between 0 and 1000000: "))
+    try:
+        n = int(input("Enter a number between 0 and 1000000: "))
+        print("In running with docker, the n argument is 10 by default.")
+    except EOFError:
+        n = 10  # The last example of the task
     print(f"The value of sentence you're looking for is: {SheypoorInterviewTaskSequence.find_nth_sentence(n)}")
 
 

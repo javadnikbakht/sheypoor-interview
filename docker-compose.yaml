@@ -1,0 +1,7 @@
+# docker-compose.yaml
+version: '3'
+services:
+  main:
+    build: .
+    command: bash -c "cat .coveragerc && coverage run tests.py && coverage report --fail-under 90"
+    command: bash -c "python tests.py && python main.py"
